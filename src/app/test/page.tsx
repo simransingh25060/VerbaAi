@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/db";
+import { prisma } from "@/src/lib/db";
 
 export default async function TestPage() {
     const voices = await prisma.voice.findMany();
