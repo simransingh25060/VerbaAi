@@ -6,8 +6,9 @@ import {
 
 export const appRouter = createTRPCRouter({
   health: baseProcedure.query(async () => {
-    return {
-      status: "ok",
+    await new Promise((resolve) => setTimeout(resolve, 5000));
+    // throw new Error("Something went wrong");
+    return { status: "ok",
       code: 123
     };
   })
