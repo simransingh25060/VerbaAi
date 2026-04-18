@@ -127,6 +127,7 @@ export const generationsRouter = createTRPCRouter({
     //   });
 
       if (error) {
+        console.error("[Chatterbox API Error]", JSON.stringify(error, null, 2));
         throw new TRPCError({
           code: "INTERNAL_SERVER_ERROR",
           message: "Failed to generate audio",

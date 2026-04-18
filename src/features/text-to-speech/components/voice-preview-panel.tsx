@@ -92,7 +92,7 @@ export function VoicePreviewPanel({
           </div>
         )}
         <div
-        //   ref={containerRef}
+          ref={containerRef}
           className={cn(
             "w-full cursor-pointer transition-opacity duration-200",
             !isReady && "opacity-0",
